@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('hh-theme');
+        document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidden Hills Hotel &amp; Resorts — Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== HOME BUTTON ===== -->
+<a href="https://www.hiddenhills.pk/" class="home-btn" aria-label="Home">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9.5v-6h5v6h3a1 1 0 0 0 1-1v-9"/></svg>
+  <span class="home-text">Home</span>
+</a>
+
+<!-- ===== TOP-RIGHT ACTIONS: THEME TOGGLE + REVIEW BUTTON ===== -->
+<div class="top-actions">
+  <button type="button" id="themeToggle" class="theme-toggle" role="switch" aria-checked="false" aria-label="Switch to dark mode">
+    <span class="theme-toggle-track">
+      <span class="theme-toggle-thumb">
+        <span class="theme-toggle-icon icon-sun">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </span>
+        <span class="theme-toggle-icon icon-moon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </span>
+      </span>
+    </span>
+  </button>
+
+  <a href="https://www.google.com/search?sca_esv=f0c72423257adc39&sxsrf=ANbL-n5erbaP7BS3PMYMUr9adDruzXCNLA:1779620592472&q=hidden+hill&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOW-KKL5y58otK7uLBkLQ2E1mcdHh6hws-ibSAlD2JDbzHOphOgZUEpbTqcXvULBD_5hE4mLsLdHUnbQpGzStOMLT04bZC-bvXxQonu-zVfbEstQJIw%3D%3D&ved=1t:247458&ictx=111&biw=1280&bih=632&dpr=1.5#lrd=0x38de3b1f9458be79:0x855584c3e40231f5,3,,,,"
+     class="review-btn" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    <span class="rev-text">Leave a Review</span>
+  </a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-logo-wrap">
+    <img src="img/logo.png" alt="Hidden Hills Logo" class="hero-logo-img" />
+  </div>
+  <h1 class="hero-hh">HIDDEN<span>HILLS</span></h1>
+  <p class="hero-subtitle">Hotel &amp; Resorts</p>
+  <div class="hero-certified">
+    <span class="hero-certified-diamonds">✦ ✦ ✦ ✦</span>
+    <span>Certified</span>
+    <span class="hero-certified-diamonds">✦ ✦ ✦ ✦</span>
+  </div>
+  <p class="hero-cafe">Café &amp; Restaurant</p>
+  <div class="hero-divider">
+    <span></span>
+    <i>✦</i>
+    <span></span>
+  </div>
+  <p class="hero-tagline">A Culinary Journey of Exceptional Flavour</p>
+  <div class="hero-hours">
+    <span></span>
+    Serving from 12 Noon till 11:30 PM
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Explore Menu</span>
+  </div>
+</section>
+
+<!-- ===== CATEGORY NAV ===== -->
+<div class="cat-nav-wrap">
+  <nav class="cat-nav" id="catNav">
+    <button class="cat-btn active" data-target="soup">Soup &amp; Salads</button>
+    <button class="cat-btn" data-target="appetizers">Appetizers</button>
+    <button class="cat-btn" data-target="chinese">Chinese &amp; Thai</button>
+    <button class="cat-btn" data-target="pizza">Pizza &amp; Pasta</button>
+    <button class="cat-btn" data-target="mughlai">Mughlai &amp; Desi</button>
+    <button class="cat-btn" data-target="handi">Special Handi</button>
+    <button class="cat-btn" data-target="biryani">Biryani &amp; Pulao</button>
+    <button class="cat-btn" data-target="burgers">Burgers &amp; Sandwiches</button>
+    <button class="cat-btn" data-target="continental">Continental</button>
+    <button class="cat-btn" data-target="grill">From the Grill</button>
+    <button class="cat-btn" data-target="arabic">Arabic Delicacies</button>
+    <button class="cat-btn" data-target="tandoor">The Tandoor</button>
+    <button class="cat-btn" data-target="kids">Kid's Menu</button>
+    <button class="cat-btn" data-target="desserts">Desserts</button>
+    <button class="cat-btn" data-target="drinks">Beverages</button>
+  </nav>
+</div>
+
+<!-- ===== MAIN — sections injected here ===== -->
+<main class="main" id="menuMain">
+  <!-- Sections are loaded dynamically via sections/loader.js -->
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-logo">HIDDEN<span>HILLS</span></div>
+  <div class="footer-sub">Hotel &amp; Resorts</div>
+  <div class="footer-stars">★ ★ ★ ★</div>
+  <a href="https://www.google.com/search?sca_esv=f0c72423257adc39&sxsrf=ANbL-n5erbaP7BS3PMYMUr9adDruzXCNLA:1779620592472&q=hidden+hill&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOW-KKL5y58otK7uLBkLQ2E1mcdHh6hws-ibSAlD2JDbzHOphOgZUEpbTqcXvULBD_5hE4mLsLdHUnbQpGzStOMLT04bZC-bvXxQonu-zVfbEstQJIw%3D%3D&ved=1t:247458&ictx=111&biw=1280&bih=632&dpr=1.5#lrd=0x38de3b1f9458be79:0x855584c3e40231f5,3,,,,"
+     class="footer-review-btn" target="_blank" rel="noopener">
+    ★ &nbsp; Leave a Google Review
+  </a>
+  <div class="footer-note">
+    <strong>All prices are subject to prevailing Government Taxes.</strong><br>
+    5% service charges apply.<br>
+    Menu is served from <strong>12 Noon to 11:30 PM</strong> daily.
+  </div>
+  <div class="footer-copy">© 2026 Hidden Hills Hotel &amp; Resorts. All rights reserved.</div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="js/theme.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
